@@ -1,177 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Michael | Cloud & IT Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Inter', sans-serif; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Kimani's Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            backdrop-filter: blur(10px);
+            transition: background-color 0.3s;
+        }
+        nav.scrolled {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    </style>
 </head>
-<body class="bg-slate-950 text-slate-100">
+<body class="bg-gray-900">
+    <nav class="p-5">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">Michael Kimani</a>
+            <ul class="flex space-x-4">
+                <li><a href="#about" class="hover:text-indigo-300">About</a></li>
+                <li><a href="#skills" class="hover:text-indigo-300">Skills</a></li>
+                <li><a href="#contact" class="hover:text-indigo-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <!-- Hero -->
-  <section class="min-h-screen flex items-center justify-center px-6">
-    <div class="max-w-4xl text-center">
-      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
-        Michael Kimani
-        <span class="block text-indigo-400">Cloud Engineer </span>
-      </h1>
-      <p class="mt-6 text-lg text-slate-300">
-        Certified Cloud Practitioner with strong foundations in AWS Cloud Computing,
-        networking, and modern infrastructure. Focused on building reliable, scalable,
-        and secure systems.
-      </p>
-      <div class="mt-8 flex justify-center gap-4">
-        <a href="#projects" class="px-6 py-3 rounded-xl bg-indigo-500 hover:bg-indigo-600 transition font-semibold">View Projects</a>
-        <a href="#contact" class="px-6 py-3 rounded-xl border border-slate-700 hover:border-indigo-400 transition font-semibold">Contact Me</a>
-      </div>
-    </div>
-  </section>
+    <header class="hero bg-cover h-screen flex items-center justify-center text-center">
+        <div>
+            <h1 class="text-5xl md:text-7xl font-bold">Welcome to My Personal Portfolio</h1>
+            <p class="text-lg mt-4">I'm Michael Kimani, a passionate developer.</p>
+        </div>
+    </header>
 
-  <!-- About -->
-  <section class="py-20 px-6 bg-slate-900/50">
-    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
-      <div>
-        <h2 class="text-3xl font-bold mb-4">About Me</h2>
-        <p class="text-slate-300 leading-relaxed">
-          I am a Cloud Engineer and IT Support professional based in Nairobi, Kenya, with a strong
-          interest in cloud computing and modern IT infrastructure. My primary focus
-          is AWS, where I am building hands-on skills in cloud services, architecture,
-          and best practices.
-        </p>
-        <p class="mt-4 text-slate-300 leading-relaxed">
-          Alongside cloud computing, I have practical experience in system
-          administration, artificial intelligence, cybersecurity
-          awareness, and computer networking. I continuously improve my
-          skills through structured learning and hands-on labs.
-        </p>
-      </div>
-      <div class="bg-slate-950 rounded-2xl p-8 shadow-lg">
-        <h3 class="text-xl font-semibold mb-4">Quick Facts</h3>
-        <ul class="space-y-3 text-slate-300">
-          <li><span class="text-indigo-400">Location:</span> Nairobi, Kenya</li>
-          <li><span class="text-indigo-400">Role:</span> Cloud and IT Support</li>
-          <li><span class="text-indigo-400">Primary Focus:</span> AWS Cloud Computing</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    <section id="about" class="py-20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">About Me</h2>
+            <p>I'm a developer with skills in various technologies including:</p>
+        </div>
+    </section>
 
-  <!-- About -->
-  <section class="py-20 px-6 bg-slate-900/50">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl font-bold mb-10 text-center">Additional Skills</h2>
-      <div class="flex flex-row gap-6 flex-wrap justify-center md:flex-nowrap">
-        <div class="bg-slate-950 rounded-2xl p-6 w-full md:w-1/5">
-          <h3 class="font-semibold text-indigo-400 mb-2">Cloud Computing (AWS)</h3>
-          <p class="text-slate-300">AWS-focused cloud skills covering core services, architecture concepts, security fundamentals, and hands-on labs. Early-stage exposure to GCP.</p>
+    <section id="skills" class="py-20 bg-gray-800">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4">Technical Expertise</h2>
+            <ul class="list-disc list-inside">
+                <li>AWS services</li>
+                <li>Learning platforms</li>
+                <li>Programming Languages</li>
+                <li>Frameworks & Tools</li>
+            </ul>
         </div>
-        <div class="bg-slate-950 rounded-2xl p-6 w-full md:w-1/5">
-          <h3 class="font-semibold text-indigo-400 mb-2">Artificial Intelligence</h3>
-          <p class="text-slate-300">AWS Artificial Intelligence Practitioner badge with applied knowledge of Bedrock, SageMaker, and foundational AI/ML concepts.</p>
-        </div>
-        <div class="bg-slate-950 rounded-2xl p-6 w-full md:w-1/5">
-          <h3 class="font-semibold text-indigo-400 mb-2">System Administration</h3>
-          <p class="text-slate-300">System administration skills from Microsoft learning, including Windows/Linux basics, user management, troubleshooting, patching, and backups.</p>
-        </div>
-        <div class="bg-slate-950 rounded-2xl p-6 w-full md:w-1/5">
-          <h3 class="font-semibold text-indigo-400 mb-2">Cybersecurity</h3>
-          <p class="text-slate-300">Cybersecurity fundamentals validated through LinkedIn certificates, covering security awareness, risk basics, and best practices.</p>
-        </div>
-        <div class="bg-slate-950 rounded-2xl p-6 w-full md:w-1/5">
-          <h3 class="font-semibold text-indigo-400 mb-2">Computer Networking</h3>
-          <p class="text-slate-300">General networking knowledge including IP addressing, connectivity troubleshooting, and infrastructure fundamentals.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- AWS Skills -->
-  <section class="py-20 px-6">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-3xl font-bold mb-10 text-center">AWS Cloud Computing</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-slate-900 rounded-2xl p-6 hover:shadow-xl transition">
-          <h3 class="text-xl font-semibold mb-2 text-indigo-400">Core Services</h3>
-          <p class="text-slate-300">
-            EC2, S3, IAM, VPC, RDS, and CloudWatch with a focus on security and cost
-            awareness.
-          </p>
+    <section id="contact" class="py-20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">Contact Me</h2>
+            <p>Email: <a href="mailto:michael.kimani@example.com" class="text-indigo-300">michael.kimani@example.com</a></p>
+            <p>WhatsApp: <a href="https://wa.me/1234567890" class="text-indigo-300">Chat with me!</a></p>
+            <div class="flex justify-center mt-4">
+                <a href="#" class="text-indigo-300 mx-2"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-indigo-300 mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-indigo-300 mx-2"><i class="fab fa-linkedin"></i></a>
+            </div>
         </div>
-        <div class="bg-slate-900 rounded-2xl p-6 hover:shadow-xl transition">
-          <h3 class="text-xl font-semibold mb-2 text-indigo-400">Architecture</h3>
-          <p class="text-slate-300">
-            Designing basic cloud architectures following AWS best practices for
-            availability, scalability, and reliability.
-          </p>
-        </div>
-        <div class="bg-slate-900 rounded-2xl p-6 hover:shadow-xl transition">
-          <h3 class="text-xl font-semibold mb-2 text-indigo-400">Certification</h3>
-          <p class="text-slate-300">
-            AWS Certified Cloud Practitioner with a solid understanding of the AWS
-            shared responsibility model.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Projects -->
-  <section id="projects" class="py-20 px-6">
-    <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-10">Projects & Learning</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-slate-900 rounded-2xl p-8 hover:shadow-xl transition text-left">
-          <h3 class="text-xl font-semibold mb-3 text-indigo-400">AWS Skill Builder – SimuLearn</h3>
-          <p class="text-slate-300 mb-4">
-            Hands-on AWS-focused learning through simulations and guided labs. Emphasis on
-            cloud services, architecture understanding, security fundamentals, and real-world
-            AWS scenarios aligned with best practices.
-          </p>
-          <a href="https://skillsprofile.skillbuilder.aws/user/michaelkimani/simulearn" target="_blank" rel="noopener noreferrer" class="inline-block px-5 py-3 rounded-xl bg-indigo-500 hover:bg-indigo-600 transition font-semibold">
-            View AWS Skill Builder Profile
-          </a>
-        </div>
-        <div class="bg-slate-900 rounded-2xl p-8 hover:shadow-xl transition text-left">
-          <h3 class="text-xl font-semibold mb-3 text-indigo-400">Google Skills Profile</h3>
-          <p class="text-slate-300 mb-4">
-            Early-stage learning and skill development through Google programs, complementing
-            cloud and IT fundamentals while expanding exposure beyond AWS.
-          </p>
-          <a href="https://www.skills.google/public_profiles/6be34c93-4eaf-42b2-a238-fdc3e533db3e" target="_blank" rel="noopener noreferrer" class="inline-block px-5 py-3 rounded-xl bg-indigo-500 hover:bg-indigo-600 transition font-semibold">
-            View Google Skills Profile
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="py-20 px-6 bg-slate-900/50">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
-      <p class="text-slate-300 mb-8">
-        Open to cloud, IT support, and infrastructure opportunities.
-      </p>
-      <div class="text-slate-300 space-y-3">
-        <p>
-          Email:
-          <a href="mailto:greyhat.hg@gmail.com" class="text-indigo-400 hover:underline">Send Email</a>
-        </p>
-        <p>
-          WhatsApp:
-          <a href="https://wa.me/254718112011" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:underline">Chat on WhatsApp</a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <footer class="py-6 text-center text-slate-500 text-sm">
-    © 2026 Michael Kimani.
-  </footer>
-
+    <script>
+        window.onscroll = function() {
+            const nav = document.querySelector('nav');
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        };
+    </script>
 </body>
 </html>
