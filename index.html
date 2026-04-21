@@ -5,173 +5,396 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Michael | Cloud & IT Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Manrope', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif']
+          },
+          colors: {
+            ink: '#0b1020',
+            panel: '#11182d',
+            line: '#25304d',
+            mist: '#8ea0c9',
+            glow: '#7dd3fc',
+            mint: '#6ee7b7',
+            sand: '#f5e6c8'
+          },
+          boxShadow: {
+            soft: '0 24px 80px rgba(8, 15, 34, 0.35)'
+          },
+          backgroundImage: {
+            grid: 'linear-gradient(rgba(142,160,201,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(142,160,201,0.08) 1px, transparent 1px)'
+          },
+          animation: {
+            float: 'float 6s ease-in-out infinite',
+            rise: 'rise 900ms ease-out forwards'
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' }
+            },
+            rise: {
+              '0%': { opacity: 0, transform: 'translateY(18px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
   <style>
-    body { font-family: 'Inter', sans-serif; }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(125, 211, 252, 0.14), transparent 28%),
+        radial-gradient(circle at 80% 10%, rgba(110, 231, 183, 0.12), transparent 24%),
+        linear-gradient(180deg, #07101f 0%, #0b1020 100%);
+    }
   </style>
 </head>
-<body class="bg-slate-950 text-slate-100">
-
-  <!-- Hero -->
-  <section class="min-h-screen flex items-center justify-center px-6">
-    <div class="max-w-4xl text-center">
-      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
-        Michael Kimani
-        <span class="block text-indigo-400">Cloud Engineer </span>
-      </h1>
-      <p class="mt-6 text-lg text-slate-300">
-        Certified Cloud Practitioner with strong foundations in AWS Cloud Computing,
-        networking, and modern infrastructure. Focused on building reliable, scalable,
-        and secure systems.
-      </p>
-      <div class="mt-8 flex justify-center gap-4">
-        <a href="#projects" class="px-6 py-3 rounded-xl bg-indigo-500 hover:bg-indigo-600 transition font-semibold">View Projects</a>
-        <a href="#contact" class="px-6 py-3 rounded-xl border border-slate-700 hover:border-indigo-400 transition font-semibold">Contact Me</a>
-      </div>
+<body class="bg-ink bg-grid bg-[length:36px_36px] text-white selection:bg-glow/30">
+  <div class="fixed inset-x-0 top-0 z-50 border-b border-white/8 bg-ink/75 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+      <a href="#home" class="font-display text-lg font-bold tracking-[0.25em] text-sand">MICHAEL</a>
+      <nav class="hidden items-center gap-6 text-sm text-slate-300 md:flex">
+        <a href="#about" class="transition hover:text-white">About</a>
+        <a href="#skills" class="transition hover:text-white">Skills</a>
+        <a href="#projects" class="transition hover:text-white">Projects</a>
+        <a href="#experience" class="transition hover:text-white">Experience</a>
+        <a href="#contact" class="transition hover:text-white">Contact</a>
+      </nav>
+      <a href="#contact" class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:border-glow/50 hover:bg-white/10">
+        Let's Connect
+      </a>
     </div>
-  </section>
+  </div>
 
-  <!-- About -->
-  <section class="py-20 px-6 bg-slate-900/50">
-    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
-      <div>
-        <h2 class="text-3xl font-bold mb-4">About Me</h2>
-        <p class="text-slate-300 leading-relaxed">
-          I am a Cloud Engineer and IT Support professional based in Nairobi, Kenya, with a strong
-          interest in cloud computing and modern IT infrastructure. My primary focus
-          is AWS, where I am building hands-on skills in cloud services, architecture,
-          and best practices.
-        </p>
-        <p class="mt-4 text-slate-300 leading-relaxed">
-          Alongside cloud computing, I have practical experience in system
-          administration, artificial intelligence, cybersecurity
-          awareness, and computer networking. I continuously improve my
-          skills through structured learning and hands-on labs.
-        </p>
-      </div>
-      <div class="bg-slate-950 rounded-2xl p-8 shadow-lg">
-        <h3 class="text-xl font-semibold mb-4">Quick Facts</h3>
-        <ul class="space-y-3 text-slate-300">
-          <li><span class="text-indigo-400">Location:</span> Nairobi, Kenya</li>
-          <li><span class="text-indigo-400">Role:</span> Cloud and IT Support</li>
-          <li><span class="text-indigo-400">Primary Focus:</span> AWS Cloud Computing</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+  <main id="home" class="overflow-hidden pt-24">
+    <section class="relative px-6 pb-20 pt-10 lg:px-8 lg:pb-28 lg:pt-16">
+      <div class="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-[1.15fr_0.85fr]">
+        <div class="animate-rise">
+          <p class="mb-6 inline-flex items-center gap-2 rounded-full border border-glow/20 bg-glow/10 px-4 py-2 text-sm font-medium text-glow">
+            Nairobi, Kenya
+            <span class="h-1.5 w-1.5 rounded-full bg-mint"></span>
+            Open to opportunities
+          </p>
+          <h1 class="max-w-4xl font-display text-5xl font-bold leading-none text-white sm:text-6xl lg:text-7xl">
+            Michael
+            <span class="block text-sand">Cloud &amp; IT Support Specialist</span>
+            building reliable digital systems.
+          </h1>
+          <p class="mt-8 max-w-2xl text-lg leading-8 text-slate-300">
+            IT Tech Support professional with strong foundations in AWS Cloud Computing,
+            networking, and modern infrastructure. Focused on building reliable, scalable,
+            and secure systems.
+          </p>
+          <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+            <a href="#projects" class="rounded-full bg-sand px-7 py-3.5 text-center font-semibold text-slate-950 transition hover:translate-y-[-2px] hover:bg-white">
+              View My Work
+            </a>
+            <a href="#about" class="rounded-full border border-white/10 bg-white/5 px-7 py-3.5 text-center font-semibold text-white transition hover:border-white/20 hover:bg-white/10">
+              About Me
+            </a>
+          </div>
+          <div class="mt-12 grid max-w-2xl grid-cols-1 gap-4 sm:grid-cols-3">
+            <div class="rounded-3xl border border-white/8 bg-white/5 p-5 shadow-soft">
+              <p class="text-3xl font-extrabold text-white">AWS</p>
+              <p class="mt-1 text-sm text-mist">Primary cloud focus</p>
+            </div>
+            <div class="rounded-3xl border border-white/8 bg-white/5 p-5 shadow-soft">
+              <p class="text-3xl font-extrabold text-white">IT Ops</p>
+              <p class="mt-1 text-sm text-mist">Support and troubleshooting</p>
+            </div>
+            <div class="rounded-3xl border border-white/8 bg-white/5 p-5 shadow-soft">
+              <p class="text-3xl font-extrabold text-white">Labs</p>
+              <p class="mt-1 text-sm text-mist">Continuous hands-on learning</p>
+            </div>
+          </div>
+        </div>
 
-  <!-- About -->
-  <section class="py-20 px-6 bg-slate-900/50">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl font-bold mb-10 text-center">Additional Skills</h2>
-      <div class="flex flex-row gap-6 flex-wrap justify-center md:flex-nowrap">
-        <div class="bg-slate-950 rounded-2xl p-6 w-full md:w-1/5">
-          <h3 class="font-semibold text-indigo-400 mb-2">Cloud Computing (AWS)</h3>
-          <p class="text-slate-300">AWS-focused cloud skills covering core services, architecture concepts, security fundamentals, and hands-on labs. Early-stage exposure to GCP.</p>
-        </div>
-        <div class="bg-slate-950 rounded-2xl p-6 w-full md:w-1/5">
-          <h3 class="font-semibold text-indigo-400 mb-2">Artificial Intelligence</h3>
-          <p class="text-slate-300">AWS Artificial Intelligence Practitioner badge with applied knowledge of Bedrock, SageMaker, and foundational AI/ML concepts.</p>
-        </div>
-        <div class="bg-slate-950 rounded-2xl p-6 w-full md:w-1/5">
-          <h3 class="font-semibold text-indigo-400 mb-2">System Administration</h3>
-          <p class="text-slate-300">System administration skills from Microsoft learning, including Windows/Linux basics, user management, troubleshooting, patching, and backups.</p>
-        </div>
-        <div class="bg-slate-950 rounded-2xl p-6 w-full md:w-1/5">
-          <h3 class="font-semibold text-indigo-400 mb-2">Cybersecurity</h3>
-          <p class="text-slate-300">Cybersecurity fundamentals validated through LinkedIn certificates, covering security awareness, risk basics, and best practices.</p>
-        </div>
-        <div class="bg-slate-950 rounded-2xl p-6 w-full md:w-1/5">
-          <h3 class="font-semibold text-indigo-400 mb-2">Computer Networking</h3>
-          <p class="text-slate-300">General networking knowledge including IP addressing, connectivity troubleshooting, and infrastructure fundamentals.</p>
+        <div class="relative animate-float">
+          <div class="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-glow/20 via-transparent to-mint/20 blur-3xl"></div>
+          <div class="relative rounded-[2rem] border border-white/10 bg-panel/75 p-6 shadow-soft backdrop-blur">
+            <div class="rounded-[1.5rem] border border-white/10 bg-ink/90 p-6">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-sm uppercase tracking-[0.25em] text-mist">Profile</p>
+                  <h2 class="mt-2 font-display text-2xl font-bold text-white">Michael</h2>
+                </div>
+                <div class="rounded-full border border-mint/30 bg-mint/10 px-3 py-1 text-xs font-semibold text-mint">
+                  Cloud & IT
+                </div>
+              </div>
+              <div class="mt-8 space-y-4">
+                <div class="rounded-2xl border border-white/8 bg-white/5 p-4">
+                  <p class="text-sm text-mist">What I do</p>
+                  <p class="mt-2 text-base font-semibold text-white">Technical support, cloud learning, infrastructure fundamentals, and secure operations.</p>
+                </div>
+                <div class="rounded-2xl border border-white/8 bg-white/5 p-4">
+                  <p class="text-sm text-mist">Current direction</p>
+                  <p class="mt-2 text-base font-semibold text-white">Growing deeper in AWS architecture, security, and modern operations workflows.</p>
+                </div>
+                <div class="rounded-2xl border border-white/8 bg-white/5 p-4">
+                  <p class="text-sm text-mist">Work style</p>
+                  <p class="mt-2 text-base font-semibold text-white">Reliable, detail-oriented, and always improving through structured practice.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- AWS Skills -->
-  <section class="py-20 px-6">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-3xl font-bold mb-10 text-center">AWS Cloud Computing</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-slate-900 rounded-2xl p-6 hover:shadow-xl transition">
-          <h3 class="text-xl font-semibold mb-2 text-indigo-400">Core Services</h3>
-          <p class="text-slate-300">
-            EC2, S3, IAM, VPC, RDS, and CloudWatch with a focus on security and cost
-            awareness.
+    <section id="about" class="px-6 py-20 lg:px-8">
+      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+        <div>
+          <p class="text-sm uppercase tracking-[0.35em] text-mint">About Me</p>
+          <h2 class="mt-4 font-display text-4xl font-bold text-white">A practical IT professional based in Nairobi, Kenya, transitioning deeper into cloud.</h2>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="rounded-[1.75rem] border border-white/8 bg-white/5 p-7">
+            <h3 class="text-xl font-bold text-sand">My Story</h3>
+            <p class="mt-4 leading-8 text-slate-300">
+              I am an IT Tech Support professional based in Nairobi, Kenya, with a strong
+              interest in cloud computing and modern IT infrastructure. My primary focus
+              is AWS, where I am building hands-on skills in cloud services, architecture,
+              and best practices.
+            </p>
+          </div>
+          <div class="rounded-[1.75rem] border border-white/8 bg-white/5 p-7">
+            <h3 class="text-xl font-bold text-sand">My Approach</h3>
+            <ul class="mt-4 space-y-3 text-slate-300">
+              <li>Continuously improve through structured learning and hands-on labs.</li>
+              <li>Prioritize reliability, security, and clarity.</li>
+              <li>Build across cloud computing, system administration, and networking.</li>
+              <li>Support users with patience and structured troubleshooting.</li>
+            </ul>
+          </div>
+          <div class="rounded-[1.75rem] border border-white/8 bg-white/5 p-7 md:col-span-2">
+            <h3 class="text-xl font-bold text-sand">Quick Facts</h3>
+            <div class="mt-5 grid gap-4 sm:grid-cols-3">
+              <div class="rounded-2xl border border-white/8 bg-ink/70 p-4">
+                <p class="text-xs uppercase tracking-[0.25em] text-mist">Location</p>
+                <p class="mt-2 font-semibold text-white">Nairobi, Kenya</p>
+              </div>
+              <div class="rounded-2xl border border-white/8 bg-ink/70 p-4">
+                <p class="text-xs uppercase tracking-[0.25em] text-mist">Current Role</p>
+                <p class="mt-2 font-semibold text-white">IT Tech Support</p>
+              </div>
+              <div class="rounded-2xl border border-white/8 bg-ink/70 p-4">
+                <p class="text-xs uppercase tracking-[0.25em] text-mist">Special Interest</p>
+                <p class="mt-2 font-semibold text-white">AWS Cloud Computing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="border-y border-white/8 bg-white/[0.03] px-6 py-20 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-3xl">
+          <p class="text-sm uppercase tracking-[0.35em] text-glow">Skills & Expertise</p>
+          <h2 class="mt-4 font-display text-4xl font-bold text-white">The areas I work on and continue to sharpen.</h2>
+        </div>
+
+        <div class="mt-12 grid gap-6 lg:grid-cols-2">
+          <div class="rounded-[2rem] border border-white/8 bg-panel/70 p-8">
+            <h3 class="text-2xl font-bold text-sand">Core Focus</h3>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <span class="rounded-full border border-glow/20 bg-glow/10 px-4 py-2 text-sm text-glow">AWS Cloud Computing</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200">IT Support</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200">Troubleshooting</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200">Networking</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200">System Administration</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200">Security Fundamentals</span>
+            </div>
+            <div class="mt-8 grid gap-4 sm:grid-cols-3">
+              <div class="rounded-2xl border border-white/8 bg-white/5 p-4">
+                <p class="text-sm font-semibold text-white">Core AWS Services</p>
+                <p class="mt-2 text-sm text-mist">EC2, S3, IAM, VPC, RDS, CloudWatch</p>
+              </div>
+              <div class="rounded-2xl border border-white/8 bg-white/5 p-4">
+                <p class="text-sm font-semibold text-white">Architecture Basics</p>
+                <p class="mt-2 text-sm text-mist">Availability, scalability, reliability, cost awareness</p>
+              </div>
+              <div class="rounded-2xl border border-white/8 bg-white/5 p-4">
+                <p class="text-sm font-semibold text-white">Certification</p>
+                <p class="mt-2 text-sm text-mist">AWS Certified Cloud Practitioner</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid gap-6 sm:grid-cols-2">
+            <article class="rounded-[1.75rem] border border-white/8 bg-white/5 p-6">
+              <h3 class="text-lg font-bold text-white">Artificial Intelligence</h3>
+              <p class="mt-3 leading-7 text-slate-300">
+                AWS Artificial Intelligence Practitioner badge with applied knowledge of Bedrock,
+                SageMaker, and foundational AI/ML concepts.
+              </p>
+            </article>
+            <article class="rounded-[1.75rem] border border-white/8 bg-white/5 p-6">
+              <h3 class="text-lg font-bold text-white">System Administration</h3>
+              <p class="mt-3 leading-7 text-slate-300">
+                System administration skills from Microsoft learning, including Windows/Linux basics,
+                user management, troubleshooting, patching, and backups.
+              </p>
+            </article>
+            <article class="rounded-[1.75rem] border border-white/8 bg-white/5 p-6">
+              <h3 class="text-lg font-bold text-white">Cybersecurity</h3>
+              <p class="mt-3 leading-7 text-slate-300">
+                Cybersecurity fundamentals validated through LinkedIn certificates, covering security awareness,
+                risk basics, and best practices.
+              </p>
+            </article>
+            <article class="rounded-[1.75rem] border border-white/8 bg-white/5 p-6">
+              <h3 class="text-lg font-bold text-white">Computer Networking</h3>
+              <p class="mt-3 leading-7 text-slate-300">
+                General networking knowledge including IP addressing, connectivity troubleshooting,
+                and infrastructure fundamentals.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="px-6 py-20 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div class="max-w-2xl">
+            <p class="text-sm uppercase tracking-[0.35em] text-sand">Featured Learning</p>
+            <h2 class="mt-4 font-display text-4xl font-bold text-white">Projects and platforms that show how I build momentum.</h2>
+          </div>
+          <p class="max-w-xl text-slate-300">
+            My portfolio is currently centered on labs, learning paths, and public skills profiles that reflect focused growth in cloud and IT.
           </p>
         </div>
-        <div class="bg-slate-900 rounded-2xl p-6 hover:shadow-xl transition">
-          <h3 class="text-xl font-semibold mb-2 text-indigo-400">Architecture</h3>
-          <p class="text-slate-300">
-            Designing basic cloud architectures following AWS best practices for
-            availability, scalability, and reliability.
-          </p>
-        </div>
-        <div class="bg-slate-900 rounded-2xl p-6 hover:shadow-xl transition">
-          <h3 class="text-xl font-semibold mb-2 text-indigo-400">Certification</h3>
-          <p class="text-slate-300">
-            AWS Certified Cloud Practitioner with a solid understanding of the AWS
-            shared responsibility model.
-          </p>
+
+        <div class="mt-12 grid gap-8 lg:grid-cols-2">
+          <article class="group overflow-hidden rounded-[2rem] border border-white/8 bg-panel/75 shadow-soft">
+            <div class="h-2 bg-gradient-to-r from-glow via-sand to-mint"></div>
+            <div class="p-8">
+              <p class="text-sm uppercase tracking-[0.25em] text-mist">AWS Learning</p>
+              <h3 class="mt-4 text-2xl font-bold text-white">AWS Skill Builder - SimuLearn</h3>
+              <p class="mt-4 leading-8 text-slate-300">
+                Hands-on AWS-focused learning through simulations and guided labs. Emphasis on
+                cloud services, architecture understanding, security fundamentals, and real-world
+                AWS scenarios aligned with best practices.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-3">
+                <span class="rounded-full bg-white/5 px-3 py-1 text-sm text-slate-200">AWS</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 text-sm text-slate-200">Labs</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 text-sm text-slate-200">Architecture</span>
+              </div>
+              <a href="https://skillsprofile.skillbuilder.aws/user/michaelkimani/simulearn" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 font-semibold text-slate-950 transition group-hover:translate-x-1">
+                View AWS Skill Builder Profile
+                <span aria-hidden="true">-&gt;</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden rounded-[2rem] border border-white/8 bg-panel/75 shadow-soft">
+            <div class="h-2 bg-gradient-to-r from-mint via-glow to-sand"></div>
+            <div class="p-8">
+              <p class="text-sm uppercase tracking-[0.25em] text-mist">Cross-Platform Learning</p>
+              <h3 class="mt-4 text-2xl font-bold text-white">Google Skills Profile</h3>
+              <p class="mt-4 leading-8 text-slate-300">
+                Early-stage learning and skill development through Google programs, complementing
+                cloud and IT fundamentals while expanding exposure beyond AWS.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-3">
+                <span class="rounded-full bg-white/5 px-3 py-1 text-sm text-slate-200">Google</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 text-sm text-slate-200">Cloud Fundamentals</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 text-sm text-slate-200">Growth Path</span>
+              </div>
+              <a href="https://www.skills.google/public_profiles/6be34c93-4eaf-42b2-a238-fdc3e533db3e" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 font-semibold text-slate-950 transition group-hover:translate-x-1">
+                View Google Skills Profile
+                <span aria-hidden="true">-&gt;</span>
+              </a>
+            </div>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Projects -->
-  <section id="projects" class="py-20 px-6">
-    <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-10">Projects & Learning</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-slate-900 rounded-2xl p-8 hover:shadow-xl transition text-left">
-          <h3 class="text-xl font-semibold mb-3 text-indigo-400">AWS Skill Builder – SimuLearn</h3>
-          <p class="text-slate-300 mb-4">
-            Hands-on AWS-focused learning through simulations and guided labs. Emphasis on
-            cloud services, architecture understanding, security fundamentals, and real-world
-            AWS scenarios aligned with best practices.
-          </p>
-          <a href="https://skillsprofile.skillbuilder.aws/user/michaelkimani/simulearn" target="_blank" rel="noopener noreferrer" class="inline-block px-5 py-3 rounded-xl bg-indigo-500 hover:bg-indigo-600 transition font-semibold">
-            View AWS Skill Builder Profile
-          </a>
+    <section id="experience" class="border-y border-white/8 bg-white/[0.03] px-6 py-20 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-3xl">
+          <p class="text-sm uppercase tracking-[0.35em] text-glow">Experience & Direction</p>
+          <h2 class="mt-4 font-display text-4xl font-bold text-white">What I bring today, and what I'm building next.</h2>
         </div>
-        <div class="bg-slate-900 rounded-2xl p-8 hover:shadow-xl transition text-left">
-          <h3 class="text-xl font-semibold mb-3 text-indigo-400">Google Skills Profile</h3>
-          <p class="text-slate-300 mb-4">
-            Early-stage learning and skill development through Google programs, complementing
-            cloud and IT fundamentals while expanding exposure beyond AWS.
-          </p>
-          <a href="https://www.skills.google/public_profiles/6be34c93-4eaf-42b2-a238-fdc3e533db3e" target="_blank" rel="noopener noreferrer" class="inline-block px-5 py-3 rounded-xl bg-indigo-500 hover:bg-indigo-600 transition font-semibold">
-            View Google Skills Profile
-          </a>
+
+        <div class="mt-12 grid gap-6 lg:grid-cols-3">
+          <div class="rounded-[1.75rem] border border-white/8 bg-panel/75 p-7">
+            <p class="text-sm uppercase tracking-[0.25em] text-mist">Support Operations</p>
+            <h3 class="mt-3 text-xl font-bold text-white">User and infrastructure support</h3>
+            <p class="mt-4 leading-8 text-slate-300">
+              Daily troubleshooting, issue resolution, systems assistance, and helping maintain dependable IT environments.
+            </p>
+          </div>
+          <div class="rounded-[1.75rem] border border-white/8 bg-panel/75 p-7">
+            <p class="text-sm uppercase tracking-[0.25em] text-mist">Cloud Growth</p>
+            <h3 class="mt-3 text-xl font-bold text-white">AWS architecture and operations learning</h3>
+            <p class="mt-4 leading-8 text-slate-300">
+              Building practical understanding of cloud services, secure design, observability, and scalable deployment thinking.
+            </p>
+          </div>
+          <div class="rounded-[1.75rem] border border-white/8 bg-panel/75 p-7">
+            <p class="text-sm uppercase tracking-[0.25em] text-mist">Professional Mindset</p>
+            <h3 class="mt-3 text-xl font-bold text-white">Reliable, curious, and systems-oriented</h3>
+            <p class="mt-4 leading-8 text-slate-300">
+              I enjoy turning technical complexity into practical solutions while continuing to learn and improve across every project.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-20 px-6 bg-slate-900/50">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
-      <p class="text-slate-300 mb-8">
-        Open to cloud, IT support, and infrastructure opportunities.
-      </p>
-      <div class="text-slate-300 space-y-3">
-        <p>
-          Email:
-          <a href="mailto:greyhat.hg@gmail.com" class="text-indigo-400 hover:underline">Send Email</a>
-        </p>
-        <p>
-          WhatsApp:
-          <a href="https://wa.me/254718112011" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:underline">Chat on WhatsApp</a>
-        </p>
+    <section id="contact" class="px-6 py-20 lg:px-8">
+      <div class="mx-auto grid max-w-7xl gap-8 rounded-[2rem] border border-white/8 bg-gradient-to-br from-white/8 to-white/[0.03] p-8 shadow-soft lg:grid-cols-[1fr_0.9fr] lg:p-12">
+        <div>
+          <p class="text-sm uppercase tracking-[0.35em] text-sand">Get In Touch</p>
+          <h2 class="mt-4 font-display text-4xl font-bold text-white">Open to cloud, IT support, and infrastructure opportunities.</h2>
+          <p class="mt-6 max-w-2xl leading-8 text-slate-300">
+            If you are looking for someone with strong support fundamentals, growing cloud capability,
+            and a mindset focused on reliability and learning, I would be glad to connect.
+          </p>
+        </div>
+
+        <div class="space-y-4 rounded-[1.75rem] border border-white/8 bg-ink/70 p-6">
+          <div class="rounded-2xl border border-white/8 bg-white/5 p-5">
+            <p class="text-sm uppercase tracking-[0.2em] text-mist">Email</p>
+            <a href="mailto:michaelkimani03@gmail.com" class="mt-2 block text-lg font-semibold text-white transition hover:text-glow">
+              michaelkimani03@gmail.com
+            </a>
+          </div>
+          <div class="rounded-2xl border border-white/8 bg-white/5 p-5">
+            <p class="text-sm uppercase tracking-[0.2em] text-mist">WhatsApp</p>
+            <a href="https://wa.me/254718112011" target="_blank" rel="noopener noreferrer" class="mt-2 block text-lg font-semibold text-white transition hover:text-glow">
+              0718 112 011
+            </a>
+          </div>
+          <div class="rounded-2xl border border-dashed border-sand/25 bg-sand/5 p-5 text-sm leading-7 text-slate-300">
+            Available for cloud, IT support, and infrastructure opportunities.
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <footer class="py-6 text-center text-slate-500 text-sm">
-    © 2026 Michael Kimani.
+  <footer class="border-t border-white/8 px-6 py-6 text-center text-sm text-slate-400 lg:px-8">
+    &copy; 2026 Michael. Built with HTML and Tailwind CSS.
   </footer>
-
 </body>
 </html>
